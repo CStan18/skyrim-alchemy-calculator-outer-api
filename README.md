@@ -42,17 +42,34 @@ Choose additional tools, databases, third-party services, and hosting platforms.
   - **AWS**: Offers extensive services and scalability.
   - **Jenkins**: Provides powerful automation for building, testing, and deploying code.
   - **Docker**: Simplifies application deployment by using containerization, ensuring consistency across different environments.
+  - **APIs**: If real-time data or additional game information is needed, look into existing APIs that provide game data or community-driven content.
 
-### Architecture
-Frontend (Angular)
-       |
-       V
-Backend (Spring Boot)
-       |
-       V
-Database (PostgreSQL)
+### Overall System Architecture with DevOps
 
-- **APIs**: If real-time data or additional game information is needed, look into existing APIs that provide game data or community-driven content.
+| **Component**             | **Description**                                                                                       |
+|---------------------------|-------------------------------------------------------------------------------------------------------|
+| Frontend (Angular)        | Develop the Angular application.                                                                     |
+|                           | Containerize the frontend application using Docker.                                                  |
+| Backend (Spring Boot)     | Develop the Spring Boot application.                                                                 |
+|                           | Containerize the backend application using Docker.                                                    |
+| Database (PostgreSQL)     | Use PostgreSQL for data storage.                                                                     |
+|                           | Optionally, run PostgreSQL in a Docker container for consistency across environments.                |
+| Continuous Integration/Continuous Deployment (CI/CD) |                                                                                              |
+| Jenkins                   | Automate the build, test, and deployment process.                                                     |
+|                           | Trigger builds on code commits.                                                                       |
+|                           | Build Docker images for both the frontend and backend.                                                |
+|                           | Push Docker images to a Docker registry (Docker Hub, AWS ECR, etc.).                                  |
+|                           | Deploy the application to AWS.                                                                       |
+| Containerization          |                                                                                                       |
+| Docker                    | Use Docker to containerize the frontend, backend, and database (optional).                             |
+|                           | Define Dockerfiles for the frontend and backend applications.                                          |
+|                           | Use Docker Compose for local development and testing.                                                  |
+| Hosting and Deployment    |                                                                                                       |
+| AWS                       | Use AWS services such as EC2, ECS, or EKS to run your Docker containers.                               |
+|                           | Store application data in AWS RDS (PostgreSQL).                                                        |
+|                           | Use AWS S3 for storing static assets if needed.                                                        |
+|                           | Use AWS CloudWatch for logging and monitoring.                                                         |
+
 
 #### Development Tools
 - **Version Control**: Git, with GitHub or GitLab for repository hosting, to track changes and collaborate on code.
