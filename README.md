@@ -39,10 +39,10 @@ Choose additional tools, databases, third-party services, and hosting platforms.
 - **Type**: A relational database like PostgreSQL or MySQL, for storing ingredient data and potion recipes due to their structured nature and the relationships between data entities.
 
 #### Hosting/Deployment
-- **Platform**: Consider using AWS, Heroku, or DigitalOcean.
+- **Platform**: Consider using AWS, Jenkins, or Docker.
   - **AWS**: Offers extensive services and scalability.
-  - **Heroku**: Provides simplicity and ease of use for deployment.
-  - **DigitalOcean**: Offers straightforward pricing and is developer-friendly.
+  - **Jenkins**: Provides powerful automation for building, testing, and deploying code.
+  - **Docker**: Simplifies application deployment by using containerization, ensuring consistency across different environments.
 
 #### Third-Party Services
 - **Authentication (if needed)**: Implement OAuth or JWT for secure user authentication. Firebase Authentication is also a good option for its simplicity and integration capabilities.
