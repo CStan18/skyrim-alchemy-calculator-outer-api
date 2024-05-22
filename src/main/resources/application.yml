@@ -1,0 +1,11 @@
+spring:
+  mvc:
+    static-path-pattern: /swagger*
+
+springdoc:
+  swagger-ui:
+      path: /swagger-ui.html
+
+logging:
+  level:
+    root: debug
