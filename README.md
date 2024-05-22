@@ -1,7 +1,7 @@
 # skyrim-alchemy-calculator-outer-api
 The Skyrim Alchemy Calculator is a full-stack application with an Angular front-end and Spring backend, designed to let users input their collected ingredients to find and prioritize potion recipes for maximizing gold or exploration, featuring a comprehensive ingredient database and a user-friendly interface for all devices.
 
-1.	Project Planning and Requirements Gathering
+1.	Project Planning and Requirements Gathering \
 a.	Define Objectives: Clearly articulate the goals of your application.
 i.	The primary goal of the Skyrim Alchemy Calculator application is to provide a user-friendly tool that helps players of Skyrim efficiently utilize their collected ingredients to craft potions, with a focus on maximizing economic returns (gold) or expanding their alchemical knowledge (discovery of recipes). This tool aims to enhance the gaming experience by providing a comprehensive, easy-to-navigate database and calculator for potion crafting.
 b.	Gather requirements: Compile detailed function and non-functional requirements from stakeholders.
