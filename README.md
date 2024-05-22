@@ -1,5 +1,5 @@
 # skyrim-alchemy-calculator-outer-api
-The Skyrim Alchemy Calculator is a full-stack application with an Angular front-end and Spring backend, designed to let users input their collected ingredients to find and prioritize potion recipes for maximizing gold or exploration, featuring a comprehensive ingredient database and a user-friendly interface for all devices.
+The Skyrim Alchemy Calculator is a simple full-stack application with an Angular front-end and Spring backend, designed to let users input their collected ingredients to find and prioritize potion recipes for maximizing gold or exploration, featuring a comprehensive ingredient database and a user-friendly interface for all devices.
 # Skyrim Alchemy Calculator
 
 ## Project Planning and Requirements Gathering
@@ -24,7 +24,6 @@ Compile detailed function and non-functional requirements from stakeholders.
 1. **Performance**: The application should load and respond to user inputs quickly, with potion calculations completed within seconds.
 2. **Usability**: The interface should be intuitive, requiring minimal instructions for new users to navigate and use the application effectively.
 3. **Scalability**: The backend should be capable of handling an increase in user numbers without significant degradation in performance.
-4. **Security**: User data, if collected, should be stored securely, and the application should be protected against common security threats.
 
 ### Research and Tool Selection
 Choose additional tools, databases, third-party services, and hosting platforms.
@@ -44,12 +43,18 @@ Choose additional tools, databases, third-party services, and hosting platforms.
   - **Jenkins**: Provides powerful automation for building, testing, and deploying code.
   - **Docker**: Simplifies application deployment by using containerization, ensuring consistency across different environments.
 
-#### Third-Party Services
-- **Authentication (if needed)**: Implement OAuth or JWT for secure user authentication. Firebase Authentication is also a good option for its simplicity and integration capabilities.
+### Architecture
+Frontend (Angular)
+       |
+       V
+Backend (Spring Boot)
+       |
+       V
+Database (PostgreSQL)
+
 - **APIs**: If real-time data or additional game information is needed, look into existing APIs that provide game data or community-driven content.
 
 #### Development Tools
 - **Version Control**: Git, with GitHub or GitLab for repository hosting, to track changes and collaborate on code.
-- **Project Management**: Trello, Jira, or Asana for task management and sprint planning.
 - **Testing**: Use Jest for front-end testing and Groovy for backend testing to ensure code reliability and bug-free releases.
 
