@@ -1,18 +1,16 @@
-version: '3.8'
-
 services:
   postgres:
     container_name: postgres-sql-alchemy-calc
     image: postgres
     environment:
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      PGDATA: ${PGDATA}
-      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 6767
+      PGDATA: /var/lib/postgresql/data
+      POSTGRES_DB: skyrim_alchemy_calculator
     volumes:
       - alchemy-postgres:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - 5432:5432
     networks:
       - alchemy-net
     restart: unless-stopped
