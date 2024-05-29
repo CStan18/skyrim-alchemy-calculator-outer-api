@@ -23,12 +23,6 @@ public class AlchemyController {
   
     private static final Logger logger = LoggerFactory.getLogger(AlchemyController.class);
 
-    @GetMapping(value = "/test")
-    public String swaggerUiTestEndpoint() {
-        logger.info("/test endpoint called");
-        return "Success";
-    }
-
     @PostMapping(value = "/getIngredientById")
     public ResponseEntity<Ingredient> getIngredientById() {
         return ResponseEntity.ok(potionRecipeService.getIngredientById());
