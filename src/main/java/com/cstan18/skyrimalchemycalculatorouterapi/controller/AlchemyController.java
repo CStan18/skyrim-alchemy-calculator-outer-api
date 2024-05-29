@@ -1,5 +1,6 @@
 package com.cstan18.skyrimalchemycalculatorouterapi.controller;
 
+import com.cstan18.skyrimalchemycalculatorouterapi.model.Effect;
 import com.cstan18.skyrimalchemycalculatorouterapi.model.Ingredient;
 import com.cstan18.skyrimalchemycalculatorouterapi.service.PotionRecipeService;
 import lombok.NoArgsConstructor;
@@ -31,6 +32,11 @@ public class AlchemyController {
     @PostMapping(value = "/getIngredientById")
     public ResponseEntity<Ingredient> getIngredientById() {
         return ResponseEntity.ok(potionRecipeService.getIngredientById());
+    }
+
+    @PostMapping(value = "/getEffectById")
+    public ResponseEntity<Effect> getEffectById() {
+        return ResponseEntity.ok(potionRecipeService.getEffectById());
     }
 
 }
