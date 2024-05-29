@@ -1,5 +1,6 @@
 package com.cstan18.skyrimalchemycalculatorouterapi.controller;
 
+import com.cstan18.skyrimalchemycalculatorouterapi.model.Effect;
 import com.cstan18.skyrimalchemycalculatorouterapi.model.Ingredient;
 import com.cstan18.skyrimalchemycalculatorouterapi.service.PotionRecipeService;
 import lombok.NoArgsConstructor;
@@ -22,15 +23,14 @@ public class AlchemyController {
   
     private static final Logger logger = LoggerFactory.getLogger(AlchemyController.class);
 
-    @GetMapping(value = "/test")
-    public String swaggerUiTestEndpoint() {
-        logger.info("/test endpoint called");
-        return "Success";
-    }
-
     @PostMapping(value = "/getIngredientById")
     public ResponseEntity<Ingredient> getIngredientById() {
         return ResponseEntity.ok(potionRecipeService.getIngredientById());
+    }
+
+    @PostMapping(value = "/getEffectById")
+    public ResponseEntity<Effect> getEffectById() {
+        return ResponseEntity.ok(potionRecipeService.getEffectById());
     }
 
 }
