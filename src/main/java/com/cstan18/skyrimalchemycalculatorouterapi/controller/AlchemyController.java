@@ -1,6 +1,7 @@
 package com.cstan18.skyrimalchemycalculatorouterapi.controller;
 
 import com.cstan18.skyrimalchemycalculatorouterapi.dto.request.IngredientQuantityRequest;
+import com.cstan18.skyrimalchemycalculatorouterapi.dto.response.IngredientQuantityResponse;
 import com.cstan18.skyrimalchemycalculatorouterapi.model.Effect;
 import com.cstan18.skyrimalchemycalculatorouterapi.model.Ingredient;
 import com.cstan18.skyrimalchemycalculatorouterapi.model.PotionRecipe;
@@ -25,9 +26,9 @@ public class AlchemyController {
     private static final Logger logger = LoggerFactory.getLogger(AlchemyController.class);
 
     @PostMapping(value = "/createRecipes")
-    public ResponseEntity<List<PotionRecipe>> createRecipes(@RequestBody IngredientQuantityRequest request) {
-        List<PotionRecipe> recipes = potionRecipeService.createRecipes(request);
-        return ResponseEntity.ok(recipes);
+    public ResponseEntity<IngredientQuantityResponse> createRecipes(@RequestBody IngredientQuantityRequest request) {
+        IngredientQuantityResponse response = new IngredientQuantityResponse(potionRecipeService.createRecipes(request));
+        return ResponseEntity.ok(response);
     }
 
 }
