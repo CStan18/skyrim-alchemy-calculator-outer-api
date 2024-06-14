@@ -7,6 +7,8 @@ import com.cstan18.skyrimalchemycalculatorouterapi.model.PotionRecipe;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public interface PotionRecipeService {
 
@@ -15,4 +17,6 @@ public interface PotionRecipeService {
     Effect getEffectById(Long effectId);
 
     List<PotionRecipe> createRecipes(IngredientQuantityRequest request);
+
+    Map<Long, Set<Long>> precomputeComputeCompatibleIngredients();
 }
